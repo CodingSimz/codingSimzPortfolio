@@ -109,6 +109,18 @@ h2::before, h2::after {content: ' \273F  ';color:#d03a8a;font-size: 0.9rem;}
   /*padding: 0;*/
 }
 
+.skills {
+  content: '\f13b \f09b';
+}
+
+/*
+.fa-html5:before{content:'\f13b '; color:#d03a8a;}
+.fa-css3-alt::before {content: "\f38b";}
+.fa-js::before {content: "\f3b8";}
+.fa-github::before {content: "\f09b";}
+*/
+
+
 
 /* mobile styles */
 @media screen and (max-width: 799px) {
