@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+.button {
+    margin: 0 auto; /* Hoz centre align */
+    padding: 9px;
+    border: 3px solid;
+    border-color: white;
+    border-radius: 6px;
+    font-size: 1.25em;
+    letter-spacing: 1px;
+    color: azure;
+    display: block;
+    text-align: center;
+    outline: none;
+}
+
+.btn {
+    background-color: #3EB8E1; /* Blue */
+}
+
+.btn:hover {
+    background-color: #ffd49f; /* peach */
+}
+
+.btn:active {
+    background-color: #A569BD; /* mauve */
+}
+
+#cardMsg {
+  font-family: 'Caveat', cursive;
+  font-size: 1.75rem;
+  /*line-height: 1rem;*/
+  text-align: center;
+}
+
+span {color:#A569BD;}
+
+
+.fade-in {
+  animation: fadeIn ease 10s;
+  -webkit-animation: fadeIn ease 10s;
+  -moz-animation: fadeIn ease 10s;
+  -o-animation: fadeIn ease 10s;
+  -ms-animation: fadeIn ease 10s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+}
+
+
+  
+  
+/*      use this to 'hide' vert scroll */
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}

@@ -1,0 +1,150 @@
+/* || Global Styles - all breakpoints */
+
+selector {
+  /* Positioning */
+  /* Box-model */
+  /* Typography */
+  /* Visual */
+}
+
+ @import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
+
+/* clearing user agent stylesheet */
+html {
+  box-sizing: border-box;
+  background-color: whitesmoke;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+img {width: 100%; height: auto;}
+
+body {
+  margin: 0 auto;
+/*  max-width: 80%;
+  margin: 0 auto;*/
+  /*padding: 1em;*/
+  /*background-color: white;*/
+  border: 1em solid white;
+  font-family: 'Sen', sans-serif;
+  font-size: 16px;
+}
+
+header {
+  /*background: linear-gradient(lightblue, white);*/
+  /*background-image: url(../img/lime-fishies-sml.png), linear-gradient(lightblue, white);*/
+  /*background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;*/
+  /*border-top: 1em solid white;
+  border-bottom: 2em solid white;*/
+  padding-bottom: 1rem;
+  /*border: 1em solid white;*/
+  border-bottom: 0;
+  /*position: fixed;
+  width: 80%;*/
+  top: 0;
+}
+
+nav {
+  /*border-bottom: 5px solid #AE0D7A;*/ 
+  
+}
+
+nav ul {
+  /*border-bottom: 5px solid #AE0D7A;*/
+  /*margin-right: 1rem;*/
+  text-align: right;
+  border-bottom: 2px solid #AE0D7A;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 0.5rem;
+  padding-bottom: 0.4rem;
+}
+
+nav a:link {
+  color: #AE0D7A; 
+  font-size: 1.1em;
+  text-decoration: none; 
+  /*padding: 0.2em 0.7em 0.4em;*/
+ /* padding-left: 0.75em;
+  padding-right: 0.75em;*/
+}
+
+nav a:visited {color:#AE0D7A;}
+nav a:hover {background-color: whitesmoke; color:#A2B814;}
+nav a:active {background-color: #CBE432;}
+
+h1 {font-size: 1.5rem; padding: 0.2rem 0.4rem 0;}
+h2 {font-size: 1.3rem; padding: 1rem;}
+
+h2::before, h2::after {content: ' \273F  ';color:#d03a8a;font-size: 0.9rem;}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  /*align-content: flex-start;*/
+  flex-wrap: wrap;
+}
+
+.title {
+  width: 100%;
+}
+
+.project {
+  flex-basis: 45%;
+  max-width: 400px;
+  /*min-width: 100px;*/
+  border: 1px solid #d03a8a;
+  border-radius: 20px;
+  background-color: GhostWhite;
+  margin: 0.5rem 1rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  /*padding: 0;*/
+}
+
+
+/* mobile styles */
+@media screen and (max-width: 799px) {
+  body {
+    max-width: 80%;
+    /*margin: 0 auto;*/
+    background-image: linear-gradient(lightblue, white);
+  }
+}
+
+/* Tablet styles */
+@media screen and (min-width: 800px) and (max-width: 1275px) {
+   body {
+     max-width: 70%;
+     /*margin: 0 auto;*/
+     background-image: linear-gradient(HoneyDew, white);
+  }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1276px) {
+   body {
+     max-width: 60%;
+     /*margin: 0 auto;*/
+     background-image: linear-gradient(#ebadce, white);
+  }
+  
+  .projects {
+    flex-direction: row;
+    /*flex-wrap: nowrap;*/
+    justify-content: space-between;
+    align-content: space-around;
+    /*align-items: stretch;*/
+  }
+  
+  .project {
+     height: max-content;
+  }
+}
