@@ -24,28 +24,37 @@ img {width: 100%; height: auto;}
 
 body {
   margin: 0 auto;
+  padding: 0 ;
 /*  max-width: 80%;
   margin: 0 auto;*/
   /*padding: 1em;*/
-  /*background-color: white;*/
+  background-color: white;
   border: 1em solid white;
+  color: black;
   font-family: 'Sen', sans-serif;
   font-size: 16px;
 }
 
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+.dark-mode #tmode {
+  background-color: white;
+  color: black;
+}
+.dark-mode nav a:link {color: #fab8e5;}
+.dark-mode span {color: #ffd49f;}
+.dark-mode details {background: #262626;}
+
 header {
-  /*background: linear-gradient(lightblue, white);*/
-  /*background-image: url(../img/lime-fishies-sml.png), linear-gradient(lightblue, white);*/
-  /*background-position: right;
-  background-repeat: no-repeat;
-  background-size: contain;*/
-  /*border-top: 1em solid white;
-  border-bottom: 2em solid white;*/
-  padding-bottom: 1rem;
-  /*border: 1em solid white;*/
-  border-bottom: 0;
+  margin: 0;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #AE0D7A;
   /*position: fixed;
   width: 80%;*/
+/*  margin-top: 0;
+  padding-top: 0;*/
   top: 0;
 }
 
@@ -55,10 +64,7 @@ nav {
 }
 
 nav ul {
-  /*border-bottom: 5px solid #AE0D7A;*/
-  /*margin-right: 1rem;*/
   text-align: right;
-  border-bottom: 2px solid #AE0D7A;
 }
 
 nav li {
@@ -80,10 +86,31 @@ nav a:visited {color:#AE0D7A;}
 nav a:hover {background-color: whitesmoke; color:#A2B814;}
 nav a:active {background-color: #CBE432;}
 
-h1 {font-size: 1.5rem; padding: 0.2rem 0.4rem 0;}
+h1 {
+  font-size: 1.5rem; 
+  margin:0; 
+  padding: 1rem 0.8rem 0;
+}
 h2 {font-size: 1.3rem; padding: 1rem;}
 
-h2::before, h2::after {content: ' \273F  ';color:#d03a8a;font-size: 0.9rem;}
+h2::before, h2::after {
+  content: ' \273F  '; 
+  color:#d03a8a; 
+  font-size: 0.9rem;
+}
+
+#tmode {
+  float: right;
+  margin-right: 0.5rem;
+  border-radius: 6px;
+  background: black;
+  color: white;
+  border: 3px solid;
+  border-color: #969696;
+  border-radius: 6px;
+  font-size: 0.8em;
+  outline: none;
+}
 
 .projects {
   display: flex;
@@ -98,20 +125,42 @@ h2::before, h2::after {content: ' \273F  ';color:#d03a8a;font-size: 0.9rem;}
 
 .project {
   flex-basis: 45%;
-  max-width: 400px;
+  max-width: 500px;
   /*min-width: 100px;*/
   border: 1px solid #d03a8a;
   border-radius: 20px;
   background-color: GhostWhite;
+  justify-content: center;
+  /*align-content: center;*/
   margin: 0.5rem 1rem;
   padding: 0.5rem;
   padding-left: 1rem;
   /*padding: 0;*/
 }
 
-.skills {
-  content: '\f13b \f09b';
+.project .imgs {margin: 0 auto; max-width: 300px; padding: 0; text-align:center; }
+
+details summary { 
+  margin: 0.5rem;
+  cursor: pointer;
+  list-style-position: outside;
 }
+
+details summary > * {
+  display: inline;
+}
+
+details a:link {
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+
+.skills {padding-left: 1rem;}
+.skills i{padding-left: 1rem;}
+.skills i:nth-child(even) {color:#A569BD;}
+
 
 /*
 .fa-html5:before{content:'\f13b '; color:#d03a8a;}
@@ -127,8 +176,8 @@ h2::before, h2::after {content: ' \273F  ';color:#d03a8a;font-size: 0.9rem;}
   body {
     max-width: 80%;
     /*margin: 0 auto;*/
-    background-image: linear-gradient(lightblue, white);
   }
+  header {background-image: linear-gradient(lightblue, rgba(255, 255, 255, 0.2));}
 }
 
 /* Tablet styles */
@@ -136,8 +185,8 @@ h2::before, h2::after {content: ' \273F  ';color:#d03a8a;font-size: 0.9rem;}
    body {
      max-width: 70%;
      /*margin: 0 auto;*/
-     background-image: linear-gradient(HoneyDew, white);
   }
+  header {background-image: linear-gradient(HoneyDew, rgba(255, 255, 255, 0.2));}
 }
 
 /* Desktop styles */
@@ -145,13 +194,14 @@ h2::before, h2::after {content: ' \273F  ';color:#d03a8a;font-size: 0.9rem;}
    body {
      max-width: 60%;
      /*margin: 0 auto;*/
-     background-image: linear-gradient(#ebadce, white);
   }
+  
+  header {background-image: linear-gradient(#ebadce, rgba(255, 255, 255, 0.2));}
   
   .projects {
     flex-direction: row;
     /*flex-wrap: nowrap;*/
-    justify-content: space-between;
+    justify-content: space-around;
     align-content: space-around;
     /*align-items: stretch;*/
   }
